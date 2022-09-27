@@ -1,0 +1,365 @@
+:root {
+  --main-color: #414641;
+  --secondary-color: #4c514c;
+  --alt-color: #7a8a80;
+  --background-color: #f4f6f3;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Utilidades */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+a{
+  margin-right: 10px;
+}
+
+body {
+  font-family: "Reem Kufi Fun", sans-serif;
+}
+
+h1 {
+  color: var(--main-color);
+  font-size: 78px;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+/* SecciÃ³n hero (header / nav) */
+
+header {
+  margin: 20px;
+  width: calc(100% - 40px);
+  height: calc(100vh - 40px);
+  background-image: url("https://admincontent.bimobject.com/public/topbanner/805c168b-ea2e-4e37-8721-0457acf14e2f?ver=1654865658");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+@media (max-width: 400px) {
+  header {
+    margin: 10px;
+    width: calc(100% - 20px);
+    height: calc(100vh - 20px);
+    background-position: center bottom;
+  }
+}
+
+.header-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header p {
+  color: var(--secondary-color);
+  font-size: 24px;
+}
+
+.underline {
+  width: 20%;
+  height: 5px;
+  background-color: var(--alt-color);
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.desktop-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px 0 40px;
+}
+
+@media (max-width: 480px) {
+  .desktop-menu {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .mobile-menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+}
+
+.nav-small {
+  font-size: 10px;
+}
+
+.nav-small a {
+  margin-left: 10px;
+  
+}
+
+.btn {
+  border: 2px solid var(--secondary-color);
+  padding: 5px 10px;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Seccion de articulos */
+main {
+  background-color: var(--background-color);
+  padding: 120px 0;
+}
+
+main div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  width: 40%;
+  height: 300px;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 400px) {
+  article {
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
+  }
+}
+
+
+.article-image {
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.article-content {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  gap: 15px;
+  width: 60%;
+  margin: 40px auto 0 auto;
+}
+
+@media (max-width: 400px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+/* SecciÃ³n acerca de ... */
+
+.about-section {
+  display: flex;
+}
+
+@media (max-width: 400px){
+.about-section {
+    display: block;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.about-section > div {
+  width: 50%;
+}
+
+@media (max-width: 400px){
+  .about-section > div {
+    width: 100%;
+  }
+}
+
+.about-image {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/520bc04fe4b03863c7f8a659/1505965654689-F8EUX5I1PDVT66SJ0UU8/spiritual+gifts.jpg?format=2500w");
+  background-size: cover;
+  background-position: center bottom;
+}
+
+@media (max-width: 400px){
+  .about-image {
+    height: 220px;
+    width: 100%;
+  }
+}
+
+.about-content {
+  padding: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 400px){
+  .about-content {
+    padding: 20px;
+  }
+}
+
+.about-content p{
+  text-align: justify;
+}
+
+
+/* Formulario ... */
+
+.subscribe{
+  background-color:#e1e6e0;
+  color: #414641;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 30px 40px 60px;
+  font-size: 15px;
+  
+}
+
+.subscribe > h2{
+  margin: 0px 0px 17px 0px;
+  letter-spacing: 4px;
+}
+
+.email{
+  height: 50px;
+  width: 500px;
+  border: #fff;
+  margin-bottom: 40px;
+}
+@media (max-width: 400px){
+  form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 0px 10px 0px;
+  }
+}
+
+fieldset{
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+@media (max-width: 400px){
+  fieldset > .btn{
+    width: 90%;
+    justify-content: center;
+  }
+}
+
+
+
+
+/* Footer */
+
+
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 225px;
+  color: var(--main-color);
+  align-items: center;
+}
+
+@media (max-width: 400px){
+  footer{
+  flex-direction: column-reverse;
+  }
+}
+
+
+.footer-ancle > a{
+  width: 50%;
+  text-decoration: none;
+  color: var(--main-color);
+  margin: 0px 20px 0px 30px
+}
+@media (max-width: 400px){
+  .footer-ancle > a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10px;
+    align-items: center;
+    
+  }
+}
+.social-media{
+  display: flex;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+}
+
+i{
+  padding: 2px;
+}
+
+@media (max-width: 400px){
+fieldset > .email {
+  width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
